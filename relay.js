@@ -1,5 +1,5 @@
 var net = require("net");
-relay = net.createServer(function(socket) {
+var relay = net.createServer(function(socket) {
 	socket.on('connect', function() {
 		console.log('Connected');
 	});
@@ -11,9 +11,9 @@ relay = net.createServer(function(socket) {
 		console.log("Wrote Hi");
 	});
 
-})
+});
 relay.listen(8080);
-relay2 = net.createServer(function(socket) {
+var relay2 = net.createServer(function(socket) {
 	socket.on('connect', function() {
 		console.log('Connected');
 	});
@@ -25,5 +25,5 @@ relay2 = net.createServer(function(socket) {
 		console.log("Wrote Hi");
 	});
 
-})
+});
 relay2.listen(8081);

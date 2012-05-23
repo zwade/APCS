@@ -1,1 +1,1 @@
-net: relay.js
+web: relay.js
